@@ -39,6 +39,8 @@ def call(body) {
                         /* 临时保存group，project信息，格式：MapList<Map> [group: [[NAME: project1],[NAME: project2],]] */
                         Map jobs_map = [:]
                         List<String> group_list = get_group_list(workspace)
+                        println workspace
+                        println group_list
                         group_list.each{ group ->
                             /* 给每个group初始化一个map, 后面用于保存project信息 */
                             jobs_map."${group}" = []
