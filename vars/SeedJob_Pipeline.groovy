@@ -277,6 +277,8 @@ def get_group_list(workspace){
             return
         }
         String group = path.split('/')[-3]
+        println 'group -------'
+        println group
         if(!group_list.contains(group)){
             group_list.add(group)
         }
